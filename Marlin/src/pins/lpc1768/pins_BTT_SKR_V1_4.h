@@ -49,6 +49,11 @@
 //
 // Limit Switches
 //
+// #define X_MAX_PIN   P1_26   // E0DET
+// #define Y_MAX_PIN   P1_25   // E1DET
+#define Z_MAX_PIN   P1_27   // E1DET
+#define X_MAX_PIN   P1_25   // E1DET
+
 #ifdef X_STALL_SENSITIVITY
   #define X_STOP_PIN                  X_DIAG_PIN
   #if X_HOME_DIR < 0
@@ -95,7 +100,7 @@
 // Filament Runout Sensor
 //
 #define FIL_RUNOUT_PIN                     P1_26  // E0DET
-#define FIL_RUNOUT2_PIN                    P1_25  // E1DET
+// #define FIL_RUNOUT2_PIN                    P1_25  // E1DET
 
 //
 // Power Supply Control
@@ -235,10 +240,10 @@
 
     #define BTN_EN1                        P1_20
     #define BTN_EN2                        P1_22
-    #define BTN_ENC                        P1_18
+    #define BTN_ENC                        P0_28
 
     #define LCD_PINS_ENABLE                P1_21
-    #define LCD_PINS_D4                    P1_19
+    #define LCD_PINS_D4                    P1_18
 
   #elif ENABLED(CR10_STOCKDISPLAY)
     #define BTN_ENC                        P0_28  // (58) open-drain
